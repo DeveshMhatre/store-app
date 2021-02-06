@@ -2,6 +2,7 @@
   width: 32rem;
   height: 40rem;
 
+  margin: 0 auto;
   margin-bottom: 4rem;
   padding: 2rem;
   border: 0.1rem solid $green;
@@ -79,5 +80,14 @@
       background-color: $green;
       color: $light;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    justify-self: center;
+
+    margin: 0;
+    margin-bottom: 7rem;
   }
 }

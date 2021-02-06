@@ -13,8 +13,12 @@ const ProductContainer: React.FC<Props> = ({ product }: Props) => {
   return (
     <div className="product">
       <img src={product.image} alt={product.title} className="product__image" />
-      <p className="product__title">{product.title}</p>
-      <p className="product__desc">{product.description}</p>
+      <p title={product.title} className="product__title">
+        {product.title}
+      </p>
+      <p title={product.description} className="product__desc">
+        {product.description}
+      </p>
 
       <span className="product__cart-group">
         <p className="product__cart-group--price">&#36; {product.price}</p>
