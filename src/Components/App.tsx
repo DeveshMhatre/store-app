@@ -4,12 +4,15 @@ import Header from './Header'
 import Products from './Products'
 
 import ProductsContextProvider from '../Contexts/ProductsContext'
+import CartContextProvider from '../Contexts/CartContext'
 
 const App: React.FC = () => {
   return (
     <ProductsContextProvider>
-      <Header />
-      <Products />
+      <CartContextProvider>
+        <Header />
+        <Products />
+      </CartContextProvider>
     </ProductsContextProvider>
   )
 }

@@ -12,3 +12,15 @@ export type FetchInitialValue = {
   data: Product[]
   error: string
 }
+
+export type CartItemType = {
+  id: number
+  title: string
+  price: number
+  amount: number
+  quantity: number
+}
+
+export type CartType = {
+  items?: CartItemType[]
+}
