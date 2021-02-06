@@ -9,6 +9,7 @@ type Props = {
 
 const initialValue: CartType = {
   items: [],
+  isVisible: false,
 }
 
 export const CartContext = createContext<{

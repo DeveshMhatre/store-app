@@ -1,0 +1,23 @@
+.cart {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+
+  padding-top: 1rem;
+  height: calc(100vh - 5rem);
+  width: 100%;
+
+  background-color: $green;
+
+  transition: left 300ms ease-in-out;
+
+  &--invis {
+    left: 100vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .cart {
+    top: 6rem;
+  }
+}

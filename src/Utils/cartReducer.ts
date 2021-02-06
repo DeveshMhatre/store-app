@@ -5,6 +5,8 @@ export type actionType =
   | { type: 'REMOVE'; payload: number }
   | { type: 'INCREASE'; payload: number }
   | { type: 'DECREASE'; payload: number }
+  | { type: 'SHOW' }
+  | { type: 'HIDE' }
   | { type: 'CLEAR' }
 
 const cartReducer = (state: CartType, action: actionType): CartType => {
@@ -37,9 +39,20 @@ const cartReducer = (state: CartType, action: actionType): CartType => {
             : item,
         ),
       }
+    case 'SHOW':
+      return {
+        ...state,
+        isVisible: true,
+      }
+    case 'HIDE':
+      return {
+        ...state,
+        isVisible: false,
+      }
     case 'CLEAR':
       return {
         items: [],
+        isVisible: true,
       }
     default:
       return state

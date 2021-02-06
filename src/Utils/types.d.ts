@@ -22,5 +22,6 @@ export type CartItemType = {
 }
 
 export type CartType = {
-  items?: CartItemType[]
+  items: CartItemType[]
+  isVisible: boolean
 }
