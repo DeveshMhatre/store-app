@@ -23,5 +23,7 @@ export type CartItemType = {
 
 export type CartType = {
   items: CartItemType[]
+  total_items: number
+  total_amount: number
   isVisible: boolean
 }

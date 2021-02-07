@@ -2,9 +2,9 @@ import { CartType, CartItemType } from './types'
 
 export type actionType =
   | { type: 'ADD'; payload: CartItemType }
-  | { type: 'REMOVE'; payload: number }
-  | { type: 'INCREASE'; payload: number }
-  | { type: 'DECREASE'; payload: number }
+  | { type: 'REMOVE'; payload: CartItemType }
+  | { type: 'INCREASE'; payload: CartItemType }
+  | { type: 'DECREASE'; payload: CartItemType }
   | { type: 'SHOW' }
   | { type: 'HIDE' }
   | { type: 'CLEAR' }
@@ -12,30 +12,47 @@ export type actionType =
 const cartReducer = (state: CartType, action: actionType): CartType => {
   switch (action.type) {
     case 'ADD':
+      action.payload.amount = action.payload.price * action.payload.quantity
       return {
         ...state,
+        total_items: state.total_items + 1,
+        total_amount: state.total_amount + action.payload.price,
         items: [...state.items, action.payload],
       }
     case 'REMOVE':
       return {
         ...state,
-        items: state.items.filter((item) => item.id !== action.payload),
+        total_items: state.total_items - 1,
+        total_amount: state.total_amount - action.payload.price,
+        items: state.items.filter((item) => item.id !== action.payload.id),
       }
     case 'INCREASE':
       return {
         ...state,
+        total_items: state.total_items + 1,
+        total_amount: state.total_amount + action.payload.price,
         items: state.items.map((item) =>
-          item.id === action.payload
-            ? { ...item, quantity: item.quantity + 1 }
+          item.id === action.payload.id
+            ? {
+                ...item,
+                quantity: item.quantity + 1,
+                amount: item.amount + item.price,
+              }
             : item,
         ),
       }
     case 'DECREASE':
       return {
         ...state,
+        total_items: state.total_items - 1,
+        total_amount: state.total_amount - action.payload.price,
         items: state.items.map((item) =>
-          item.id === action.payload
-            ? { ...item, quantity: item.quantity - 1 }
+          item.id === action.payload.id
+            ? {
+                ...item,
+                quantity: item.quantity - 1,
+                amount: item.amount - item.price,
+              }
             : item,
         ),
       }
@@ -51,6 +68,8 @@ const cartReducer = (state: CartType, action: actionType): CartType => {
       }
     case 'CLEAR':
       return {
+        total_amount: 0,
+        total_items: 0,
         items: [],
         isVisible: true,
       }

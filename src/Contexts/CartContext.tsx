@@ -8,6 +8,8 @@ type Props = {
 }
 
 const initialValue: CartType = {
+  total_items: 0,
+  total_amount: 0,
   items: [],
   isVisible: false,
 }
