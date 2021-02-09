@@ -16,7 +16,7 @@ const HeaderButtons: React.FC = () => {
       >
         <ArrowBackIcon
           className="header__back"
-          style={{ fontSize: 'clamp(2.5rem, 3.5vw, 3.5rem)' }}
+          style={{ fontSize: 'clamp(3.5rem, 10vw, 4.5rem)' }}
         />
       </button>
     )
@@ -28,7 +28,7 @@ const HeaderButtons: React.FC = () => {
       >
         <ShoppingCartIcon
           className="header__cart"
-          style={{ fontSize: 'clamp(2.5rem, 3.5vw, 3.5rem)' }}
+          style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)' }}
         />
       </button>
     )
