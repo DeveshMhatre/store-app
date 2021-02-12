@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 
 import { CartContext } from '../Contexts/CartContext'
 
@@ -31,6 +31,12 @@ const ProductContainer: React.FC<Props> = ({ product }: Props) => {
   const handleIncreaseClick = () => {
     dispatch({ type: 'INCREASE', payload: item })
   }
+
+  useEffect(() => {
+    if (state.total_items === 0) {
+      setAdded(false)
+    }
+  }, [state.total_items])
 
   return (
     <div className="product">
