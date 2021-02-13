@@ -28,11 +28,19 @@ const CartProductCard: React.FC<Props> = ({ product, dispatch }: Props) => {
           &#36; {product.amount.toFixed(2)}
         </p>
         <div className="cart-product__actions--shop">
-          <button className="product__inc" onClick={handleIncreaseClick}>
+          <button
+            title="Add more items"
+            className="product__inc"
+            onClick={handleIncreaseClick}
+          >
             +
           </button>
           <p className="product__quantity">{product.quantity}</p>
-          <button className="product__dec" onClick={handleDecreaseClick}>
+          <button
+            title="Remove items"
+            className="product__dec"
+            onClick={handleDecreaseClick}
+          >
             -
           </button>
         </div>

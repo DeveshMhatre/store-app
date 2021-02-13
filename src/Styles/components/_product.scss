@@ -73,6 +73,13 @@
       color: $green;
 
       cursor: pointer;
+
+      &:hover {
+        border-color: $light;
+
+        background-color: $green;
+        color: $light;
+      }
     }
 
     &--add-more {
@@ -80,6 +87,18 @@
       background-color: $green;
       color: $light;
     }
+  }
+}
+
+.snackbar {
+  div {
+    margin: 0 auto;
+
+    font-family: $body-font;
+    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+
+    background-color: $light;
+    color: $green;
   }
 }
 
