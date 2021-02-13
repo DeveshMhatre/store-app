@@ -1,9 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 
 import { CartContext } from '../Contexts/CartContext'
 
 import { Product } from '../Utils/types'
-import AddCart from './AddCart'
 
 type Props = {
   key: number
@@ -11,8 +10,6 @@ type Props = {
 }
 
 const ProductContainer: React.FC<Props> = ({ product }: Props) => {
-  const [added, setAdded] = useState(false)
-
   const { state, dispatch } = useContext(CartContext)
 
   const item = {
@@ -24,19 +21,8 @@ const ProductContainer: React.FC<Props> = ({ product }: Props) => {
   }
 
   const handleAddClick = () => {
-    setAdded(true)
     dispatch({ type: 'ADD', payload: item })
   }
-
-  const handleIncreaseClick = () => {
-    dispatch({ type: 'INCREASE', payload: item })
-  }
-
-  useEffect(() => {
-    if (state.total_items === 0) {
-      setAdded(false)
-    }
-  }, [state.total_items])
 
   return (
     <div className="product">
@@ -49,12 +35,15 @@ const ProductContainer: React.FC<Props> = ({ product }: Props) => {
       </p>
 
       <span className="product__cart-group">
-        <p className="product__cart-group--price">&#36; {product.price}</p>
-        <AddCart
-          added={added}
-          handleAddClick={handleAddClick}
-          handleIncreaseClick={handleIncreaseClick}
-        />
+        <p className="product__cart-group--price">
+          &#36; {product.price.toFixed(2)}
+        </p>
+        <button
+          className="product__cart-group--add-to-cart"
+          onClick={handleAddClick}
+        >
+          Add to Cart
+        </button>
       </span>
     </div>
   )

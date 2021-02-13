@@ -19,7 +19,7 @@ const TotalCartCard: React.FC<Props> = ({ cartItems }: Props) => {
       </div>
       <div className="total-card__amount">
         <p>Total amount</p>
-        <p>{cartItems.total_amount}</p>
+        <p>{cartItems.total_amount.toFixed(2)}</p>
       </div>
       <div className="total-card__actions">
         <button className="total-card__actions--checkout" disabled>

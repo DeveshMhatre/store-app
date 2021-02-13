@@ -13,7 +13,14 @@
 
   background-color: $green;
 
+  overflow-y: scroll;
+
   transition: left 300ms ease-in-out;
+
+  &__products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
   &--invis {
     left: 100vw;
@@ -23,5 +30,19 @@
 @media (min-width: 768px) {
   .cart {
     top: 6rem;
+
+    &__products {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 5rem;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .cart {
+    &__products {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 9rem;
+    }
   }
 }

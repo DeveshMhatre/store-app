@@ -12,7 +12,9 @@ export type actionType =
 const cartReducer = (state: CartType, action: actionType): CartType => {
   switch (action.type) {
     case 'ADD':
+      action.payload.quantity = 1
       action.payload.amount = action.payload.price * action.payload.quantity
+
       return {
         ...state,
         total_items: state.total_items + 1,
