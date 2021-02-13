@@ -96,9 +96,10 @@
 
     font-family: $body-font;
     font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+    font-weight: 800;
 
-    background-color: $light;
-    color: $green;
+    background-color: $green;
+    color: $light;
   }
 }
 

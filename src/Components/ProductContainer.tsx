@@ -56,7 +56,7 @@ const ProductContainer: React.FC<Props> = ({ product }: Props) => {
     <div className="product">
       <Snackbar
         classes={{ root: `snackbar` }}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={isOpen}
         autoHideDuration={5000}
         onClose={handleCloseClick}
