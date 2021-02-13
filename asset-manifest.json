@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/store-app/static/css/main.ecb4db10.chunk.css",
+    "main.js": "/store-app/static/js/main.a941c6b4.chunk.js",
+    "main.js.map": "/store-app/static/js/main.a941c6b4.chunk.js.map",
+    "runtime-main.js": "/store-app/static/js/runtime-main.7db5449d.js",
+    "runtime-main.js.map": "/store-app/static/js/runtime-main.7db5449d.js.map",
+    "static/js/2.d33dbcf1.chunk.js": "/store-app/static/js/2.d33dbcf1.chunk.js",
+    "static/js/2.d33dbcf1.chunk.js.map": "/store-app/static/js/2.d33dbcf1.chunk.js.map",
+    "index.html": "/store-app/index.html",
+    "static/css/main.ecb4db10.chunk.css.map": "/store-app/static/css/main.ecb4db10.chunk.css.map",
+    "static/js/2.d33dbcf1.chunk.js.LICENSE.txt": "/store-app/static/js/2.d33dbcf1.chunk.js.LICENSE.txt",
+    "static/media/illustration.cb6734b3.svg": "/store-app/static/media/illustration.cb6734b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7db5449d.js",
+    "static/js/2.d33dbcf1.chunk.js",
+    "static/css/main.ecb4db10.chunk.css",
+    "static/js/main.a941c6b4.chunk.js"
+  ]
+}
