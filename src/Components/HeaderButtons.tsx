@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../Contexts/CartContext'
 
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import Badge from '@material-ui/core/Badge'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 
 const HeaderButtons: React.FC = () => {
@@ -26,10 +27,18 @@ const HeaderButtons: React.FC = () => {
         className="header__btn--cart"
         onClick={() => dispatch({ type: 'SHOW' })}
       >
-        <ShoppingCartIcon
-          className="header__cart"
-          style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)' }}
-        />
+        <Badge
+          classes={{ root: `badge` }}
+          badgeContent={state.total_items}
+          color="secondary"
+          max={10}
+          showZero
+        >
+          <ShoppingCartIcon
+            className="header__cart"
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)' }}
+          />
+        </Badge>
       </button>
     )
   }

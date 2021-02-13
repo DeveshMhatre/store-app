@@ -54,6 +54,18 @@
   }
 }
 
+.badge {
+  span {
+    border: 0.1rem solid $light;
+
+    font-family: $body-font;
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+
+    background-color: $green;
+    color: $light;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     height: 7rem;
