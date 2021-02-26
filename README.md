@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/DeveshMhatre/store-app">
+    <img src="public/favicon.ico" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Shopping Cart App</h3>
 
-## Available Scripts
+  <p align="center">
+    A simple shopping cart app created using React and Typescript
+    <br />
+    <br />
+    <a href="https://deveshmhatre.github.io/store-app" target="_blank">View Demo</a>
+  </p>
+</p>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ul style="list-style-type: none;">
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#development-server">Development Server</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#technologies-used">Technologies Used</a>
+    </li>
+    <li>
+      <a href="#license">License</a>
+    </li>
+  </ul>
+</details>
 
-### `yarn start`
+<!-- GETTING STARTED -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `yarn test`
+#### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
+  <li>Git (2.27.0 or higher)</li>
+  <li>NodeJS (14.16.0 or higher)</li>
+  <li>Yarn (1.22.5 or higher)</li>
+</ul>
 
-### `yarn build`
+#### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/DeveshMhatre/store-app.git
+   ```
+2. Install dependencies
+   ```sh
+   yarn install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Development Server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Start the development server
 
-### `yarn eject`
+   ```sh
+   yarn run start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. The server will start running on `http://localhost:3000`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Material UI](https://material-ui.com/)
+- [Sass](https://sass-lang.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[MIT](https://choosealicense.com/licenses/mit/)
