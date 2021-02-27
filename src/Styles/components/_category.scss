@@ -1,0 +1,23 @@
+.category {
+  border: 0.1rem solid $green;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+
+  font-family: $body-font;
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &--invis {
+    background-color: transparent;
+    color: $green;
+  }
+
+  &--visible {
+    background-color: $green;
+    color: $light;
+  }
+}

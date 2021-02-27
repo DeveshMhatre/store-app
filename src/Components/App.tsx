@@ -5,16 +5,19 @@ import Products from './Products'
 import Cart from './Cart'
 
 import ProductsContextProvider from '../Contexts/ProductsContext'
+import CategoryContextProvider from '../Contexts/CategoryContext'
 import CartContextProvider from '../Contexts/CartContext'
 
 const App: React.FC = () => {
   return (
     <ProductsContextProvider>
-      <CartContextProvider>
-        <Header />
-        <Products />
-        <Cart />
-      </CartContextProvider>
+      <CategoryContextProvider>
+        <CartContextProvider>
+          <Header />
+          <Products />
+          <Cart />
+        </CartContextProvider>
+      </CategoryContextProvider>
     </ProductsContextProvider>
   )
 }

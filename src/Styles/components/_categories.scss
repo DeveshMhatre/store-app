@@ -1,0 +1,24 @@
+.categories {
+  margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  &__label {
+    font-family: $body-font;
+    font-size: clamp(1.6rem, 2vw, 2.4rem);
+
+    color: $green;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .categories__chip {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
