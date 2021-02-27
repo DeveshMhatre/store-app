@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Category: React.FC<Props> = ({ category }: Props) => {
-  const [selected, setSelected] = useState('category--invis')
+  const [selected, setSelected] = useState('category--visible')
   const { state, dispatch } = useContext(CategoryContext)
 
   const handleClick = () => {

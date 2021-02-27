@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import ProductContainer from './ProductContainer'
 import Categories from './Categories'
@@ -11,7 +11,11 @@ import { CategoryContext } from '../Contexts/CategoryContext'
 const Products: React.FC = () => {
   const products = useContext(ProductsContext)
 
-  const state = useContext(CategoryContext).state
+  const { state, dispatch } = useContext(CategoryContext)
+
+  useEffect(() => {
+    dispatch({ type: 'ALL' })
+  }, [])
 
   if (products.isLoading) {
     return (
