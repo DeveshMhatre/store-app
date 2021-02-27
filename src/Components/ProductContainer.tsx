@@ -81,6 +81,9 @@ const ProductContainer: React.FC<Props> = ({ product }: Props) => {
           handleIncreaseClick={handleIncreaseClick}
         />
       </span>
+      <div className="product__category">
+        <span className="product__category--label">{product.category}</span>
+      </div>
     </div>
   )
 }
